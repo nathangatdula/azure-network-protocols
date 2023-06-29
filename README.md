@@ -23,10 +23,13 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create two Azure virtual machines
+  - Virtual Machine #1 using Windows 10
+  - Virtual Machine #2 using Ubuntu (Linux)
+- Through Remote Desktop Connection, log into Virtual Machine #1 and download Wireshark
+- Observe different types of network protocols with Command Prompt or Powershell and Wireshark 
+  - Manipulate Virtual Machine #2's Network to DENY/ALLOW ICMP
+- Display and flush DNS cache
 
 <h2>Actions and Observations</h2>
 
