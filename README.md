@@ -125,7 +125,7 @@ You can also ping different websites and it should send replies, for example wit
 <p>
 The next protocol we will observe is SSH. In the command line, type in "ssh 10.0.0.5" with the IP address being the private IP address of VM2. This lets you connect to VM2 through the command line, similar to the Remote Desktop Connection we are currently using but with no image. It will ask you if you want to continue connecting, so type "yes". You will be asked for the password to connect to VM2 which is the password you created while making VM2. It will not show when you type in your password, but once you type it in, press enter. You will now be connected to VM2 in the command line. To exit, simply type "exit".
 <p>
-<img src="https://i.imgur.com/ElYD5s8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ElYD5s8.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
