@@ -123,11 +123,45 @@ You can also ping different websites and it should send replies, for example wit
 </p>
 <br />
 <p>
+***After typing in a different protocol in Wireshark, press the green fin symbol next to the blue fin symbol mentioned earlier and then click "Continue without saving".
+</p>
 The next protocol we will observe is SSH. In the command line, type in "ssh 10.0.0.5" with the IP address being the private IP address of VM2. This lets you connect to VM2 through the command line, similar to the Remote Desktop Connection we are currently using but with no image. It will ask you if you want to continue connecting, so type "yes". You will be asked for the password to connect to VM2 which is the password you created while making VM2. It will not show when you type in your password, but once you type it in, press enter. You will now be connected to VM2 in the command line. To exit, simply type "exit".
 <p>
 <img src="https://i.imgur.com/ElYD5s8.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In the text line, type in dhcp (DHCP is basically used to assign an IP address to devices when they are first connected to the network). Now in the command line type in ipconfig /renew and there will be DHCP traffic shown in Wireshark.
+</p>
+</p>
+<img src="https://i.imgur.com/FGWWOkn.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
+</p>
+<p>
+We will now observe DNS traffic, so type in dns in the text box. In the command line, type in " nslookup www.google.com " You will see in Wireshark that DNS traffic begins to show. This can be done with most websites for example we used google and it gave us an IP address that google uses. Now try that command but with www.disney.com ; like google, it gave us an IP address that disney uses. 
+</p>
+</p>
+<img src="https://i.imgur.com/ICZPaRf.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+</p>
+<p>
+In the command line, you can actually show the DNS cache on the VM. To do this, type in the command: ipconfig /displaydns 
+</p>
+</p>
+<img src="https://i.imgur.com/SlVY52t.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+</p>
+<p>
+You can even flush the DNS cache by typing the command: ipconfig /flushdns 
+</p>
+<img src="https://i.imgur.com/rmyJ0cy.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+The final protocol we will observe is RDP! In Wireshark, filter for only RDP traffic by typing in " tcp.port==3389 " You will see that there is constant traffic occurring and why is that? It is because RDP is showing a constant livestream from one computer to another. If you begin to input anything or move your mouse in the VM, you can see RDP traffic being spammed.
+</p>
+<img src="https://i.imgur.com/kyxvfVe.png" height="40%" width="40%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+Great job! You have observed different network protocols as well as manipulating a virtual machine's network settings to deny or allow ICMP traffic! :)
